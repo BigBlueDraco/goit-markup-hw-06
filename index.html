@@ -375,12 +375,9 @@
 
     <footer class="footer">
         <div class="container footer-warp">
-          <a href="./index.html" class="logo footer-logo">Web<span class="white-logo">Studio</span></a>
-          <p class="social-title">приєднуйтесь</p>
-        </div>
-
-        <div class="container footer-warp">
-          <address>
+          <div>
+            <a href="./index.html" class="logo footer-logo">Web<span class="white-logo">Studio</span></a>
+            <address>
             <ul class="">
               <li class="address-item">
                 <a
@@ -393,7 +390,7 @@
                 </a>
               </li>
 
-              <li class="address-ite">
+              <li class="address-item">
                 <a href="mailto:info@devstudio.com" class="link contact-link">info@devstudio.com</a>
               </li>
 
@@ -401,8 +398,12 @@
                 <a href="tel:+380961111111" class="link contact-link">+38 096 111 11 11</a>
               </li>
             </ul>
-        </address>
-      <ul class="team-contacts-warp">
+            </address>
+          </div>
+          <div class="tmp-flex">
+            <div>
+            <p class="social-title">приєднуйтесь</p>
+            <ul class="team-contacts-warp">
         <li>
           <a class="icon-canv" href="#">
             <svg class="icon" width="20px" height="20px">
@@ -431,7 +432,18 @@
           </svg>
           </a>
         </li>
-      </ul>
+            </ul>
+            </div>
+            <div>
+            <p class="social-title">Підпишіться на розсилку</p>
+            <form action="">
+              <input type="email">
+              <button class="accente-button subscribe-btn" type="button"></button>
+            </form>
+            </div>
+          </div>
+          
+          
 
         </div>
     </footer>
@@ -444,19 +456,40 @@
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
-          <form action="">
-            <label for="">
-              <span>Ім'я</span>
-              <input type="text">
+          <h2 class="modal-title no-margin">Залиште свої дані, ми вам передзвонимо</h2>
+          <form class="registration-form" name="registration-form">
+            <div class="inputs-wrap">
+            <label class="input-lable">
+                <svg class="icon input-icon" width="12px" height="12px">
+                  <use href="./images/icons.svg#icon-name"></use>
+                </svg>
+              <span class="span-block registration-lable">Ім'я</span>
+              <input class="registration-input" type="text">
             </label>
-            <label for="">
-              <span>Телефон </span>
-              <input type="text" name="" id="">
+            <label class="input-lable">
+              <svg  class="icon input-icon"width="12px" height="12px">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              <span class="span-block registration-lable">Телефон </span>
+              <input class="registration-input" type="tel" name="" id="">
             </label>
-            <label for="">
-              <span>Пошта</span>
-              <input type="text" name="" id="">
+            <label class="input-lable">
+              <svg class="icon input-icon" width="15px" height="12px">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              <span class="span-block registration-lable">Пошта</span>
+              <input class="registration-input" type="email" name="" id="">
             </label> 
+            <label>
+              <span class="span-block registration-lable">Коментар</span>
+              <textarea class="registration-textarea" name="" id="" placeholder="Введіть текст"></textarea>
+            </label>
+            </div>
+            
+            <div class="registration-check-area">
+              <input class="registration-check" type="checkbox" name="" id=""><span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
+            </div>
+            <button type="submit" class="button accente-button submit-btn">Відправити</button>
           </form>
       </div>
     </div>
