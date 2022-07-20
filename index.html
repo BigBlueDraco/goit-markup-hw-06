@@ -400,7 +400,7 @@
             </ul>
             </address>
           </div>
-          <div class="tmp-flex">
+          <div class="footer-flex">
             <div>
             <p class="social-title">приєднуйтесь</p>
             <ul class="team-contacts-warp">
@@ -436,9 +436,17 @@
             </div>
             <div>
             <p class="social-title">Підпишіться на розсилку</p>
-            <form action="">
-              <input type="email">
-              <button class="accente-button subscribe-btn" type="button"></button>
+            <form class="footer-form" onsubmit="return false">
+              <input class="footer-email-input"type="email" placeholder="E-mail">
+              
+              <button class="accente-button subscribe-btn" type="submit">
+                <span class="subscribe-text">
+                  Підписатися 
+                </span> 
+                <svg class="subscribe-icon" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
             </form>
             </div>
           </div>
@@ -452,44 +460,58 @@
     <div class="modal-backdrop is-hidden" data-modal="">
       <div class="modal-content">
           <button class="modal-close-btn" type="button" data-modal-close="">
-            <svg width="11px" height="11px">
+            <svg class="icon close-icon" width="11px" height="11px">
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
           <h2 class="modal-title no-margin">Залиште свої дані, ми вам передзвонимо</h2>
-          <form class="registration-form" name="registration-form">
+          <form class="registration-form" name="registration-form" onsubmit="">
             <div class="inputs-wrap">
             <label class="input-lable">
+              <span class="span-block registration-lable">Ім'я</span>
+              <input class="registration-input" type="text">
                 <svg class="icon input-icon" width="12px" height="12px">
                   <use href="./images/icons.svg#icon-name"></use>
                 </svg>
-              <span class="span-block registration-lable">Ім'я</span>
-              <input class="registration-input" type="text">
+              
             </label>
             <label class="input-lable">
-              <svg  class="icon input-icon"width="12px" height="12px">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
               <span class="span-block registration-lable">Телефон </span>
               <input class="registration-input" type="tel" name="" id="">
+              <svg  class="icon input-icon"width="13px" height="12px">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+              
             </label>
             <label class="input-lable">
-              <svg class="icon input-icon" width="15px" height="12px">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
               <span class="span-block registration-lable">Пошта</span>
               <input class="registration-input" type="email" name="" id="">
+              <svg class="icon input-icon" width="15px" height="12px">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+              
+              
             </label> 
+
+            
             <label>
               <span class="span-block registration-lable">Коментар</span>
-              <textarea class="registration-textarea" name="" id="" placeholder="Введіть текст"></textarea>
+              <textarea class="registration-textarea registration-input" name="" id="" placeholder="Введіть текст"></textarea>
             </label>
             </div>
-            
-            <div class="registration-check-area">
-              <input class="registration-check" type="checkbox" name="" id=""><span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
-            </div>
-            <button type="submit" class="button accente-button submit-btn">Відправити</button>
+
+             <input class="registration-check visually-hidden" type="checkbox" name="" id="accept">
+            <label class="custom-check" for="accept">
+              <svg class="icon icon-check" width="16px" height="15px">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+              <span>
+                Погоджуюся розсилкою та приймаю
+                <a class = "link policy-link" href="">Умови договору</a>
+              </span> 
+            </label>
+
+            <button type="submit" class="button accente-button submit-btn" >Відправити</button>
           </form>
       </div>
     </div>
